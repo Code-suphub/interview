@@ -10,7 +10,8 @@
     "eslint:fix": "eslint --fix .",
     "prettier": "prettier --check \"./**/*.ts\"",
     "prettier:fix": "prettier --write \"./**/*.ts\"",
-    "all": "yarn run build && yarn run format"
+    "all": "yarn run build && yarn run format",
+    "deploy": "bash deploy.sh"
   },
   "repository": {
     "type": "git",
