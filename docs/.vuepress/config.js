@@ -15,7 +15,7 @@ module.exports = {
         nav: nav,
         // siderbar:siderbar,
         // GitHub 仓库位置
-        repo: "liyupi/codefather",
+        repo: "Code-suphub/interview",
         docsBranch: "master",
     
         // 编辑链接

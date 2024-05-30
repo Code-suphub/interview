@@ -1,9 +1,11 @@
-const pre = ['os',"network","mysql","redis","Java面经","Python学习","Java学习"]
+// const pre = ['os',"network","mysql","redis","JavaLearning","PythonLearning","JavaInterview"]
+const pre = ['os',"network","mysql","redis","JavaLearning"]
 // 确保lnk数组中的每个元素都以'/'结尾
 for(let i =0;i<pre.length;i++){
     pre[i]="/"+pre[i]+"/"
 }
-const name = ['操作系统',"网络","数据库","redis","Java","Python学习","Java学习"]
+// const name = ['操作系统',"网络","数据库","redis","Java","Python学习","Java学习"]
+const name = ['操作系统',"网络","数据库","redis","Java学习"]
 const txtLst = [
     ["硬件系统","操作系统结构","内存管理","进程管理","调度算法","文件系统","设备管理","网络系统","Linux命令","学习心得"],
     ["基础篇","HTTP篇","TCP篇","IP篇","学习心得"],

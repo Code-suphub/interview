@@ -1,5 +1,3 @@
-const mysql = require("./navCfg/mysql")
-const os = require("./navCfg/os")
 const {nav} = require("./navCfg/str");
 module.exports = nav
 //     [
