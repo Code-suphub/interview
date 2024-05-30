@@ -6,7 +6,7 @@ const extraSideBar = require("./config/extraSideBar")
 const footer = require("./config/footer")
 // .vuepress/config.js
 module.exports = {
-    base: "/docs",
+    base: "/interview/",
     port: '10010',
     head: head,
     themeConfig: {

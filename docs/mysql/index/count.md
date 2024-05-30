@@ -20,6 +20,10 @@
 
 ![图片](https://img-blog.csdnimg.cn/img_convert/af711033aa3423330d3a4bc6baeb9532.png)
 
+**该结论应当是错误的，`count(*)=count(1)=count(主键字段)=count(非空字段)>count(普通字段)，因为对于非空字段的统计，不需要进行是否为null值的比较`*** 
+
+https://blog.csdn.net/weixin_44625925/article/details/107144286
+
 要弄明白这个，我们得要深入 count 的原理，以下内容基于常用的 innodb 存储引擎来说明。
 
 ### count() 是什么？

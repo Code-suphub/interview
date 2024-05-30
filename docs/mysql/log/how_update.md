@@ -287,6 +287,8 @@ binlog 文件是记录了所有数据库表结构变更和表数据修改的日�
 
 而 InnoDB 是另一个公司以插件形式引入 MySQL 的，既然只依靠 binlog 是没有 crash-safe 能力的，所以 InnoDB 使用  redo log 来实现 crash-safe 能力。
 
+**其实binlog也可以恢复，毕竟能进行删库重恢复，但是当数据库 crash 后，想要恢复未刷盘但已经写入 redo log 和 binlog 的数据到内存时，binlog 是无法恢复的。虽然 binlog 拥有全量的日志，但没有一个标志让 innoDB 判断哪些数据已经入表(写入磁盘)，哪些数据还没有。**
+
 ### redo log 和 binlog 有什么区别？
 
 这两个日志有四个区别。
