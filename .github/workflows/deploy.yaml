@@ -92,41 +92,70 @@
 #          # REPOSITORY-NAME: leoleor/leo2
 # the former is for ubuntu plantform
 
-name: Build and Deploy
-on: [push]
-permissions:
-  contents: write
-jobs:
+#name: Build and Deploy
+#on: [push]
+#permissions:
+#  contents: write
+#jobs:
+#  build:
+#    runs-on: windows-latest # The first job utilizes windows-latest
+#    steps:
+#      - name: Checkout 🛎️
+#        uses: actions/checkout@v4
+#
+#      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+#        run: |
+#          yarn build
+#
+#      - name: Upload Artifacts 🔺 # The project is then uploaded as an artifact named 'site'.
+#        uses: actions/upload-artifact@v1
+#        with:
+#          name: site
+#          path: build
+#
+#  deploy:
+#    concurrency: ci-${{ github.ref }}
+#    needs: [build] # The second job must depend on the first one to complete before running and uses ubuntu-latest instead of windows.
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout 🛎️
+#        uses: actions/checkout@v4
+#
+#      - name: Download Artifacts 🔻 # The built project is downloaded into the 'site' folder.
+#        uses: actions/download-artifact@v1
+#        with:
+#          name: site
+#
+#      - name: Deploy 🚀
+#        uses: JamesIves/github-pages-deploy-action@v4
+#        with:
+#          folder: 'site' # The deployment folder should match the name of the artifact. Even though our project builds into the 'build' folder the artifact name of 'site' must be placed here.
+
+
+name: CI
+
+# 在master分支发生push事件时触发。
+on:
+  push:
+    branches:
+      - master
+jobs: # 工作流
   build:
-    runs-on: windows-latest # The first job utilizes windows-latest
+    runs-on: ubuntu-latest #运行在虚拟机环境ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
-
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        run: |
-          yarn build
-
-      - name: Upload Artifacts 🔺 # The project is then uploaded as an artifact named 'site'.
-        uses: actions/upload-artifact@v1
+      - name: Checkout # 步骤1
+        uses: actions/checkout@v1 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
+      - name: Use Node.js ${{ matrix.node-version }} # 步骤2
+        uses: actions/setup-node@v1 # 作用：安装nodejs
         with:
-          name: site
-          path: build
-
-  deploy:
-    concurrency: ci-${{ github.ref }}
-    needs: [build] # The second job must depend on the first one to complete before running and uses ubuntu-latest instead of windows.
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
-
-      - name: Download Artifacts 🔻 # The built project is downloaded into the 'site' folder.
-        uses: actions/download-artifact@v1
-        with:
-          name: site
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: 'site' # The deployment folder should match the name of the artifact. Even though our project builds into the 'build' folder the artifact name of 'site' must be placed here.
+          node-version: ${{ matrix.node-version }} # 版本
+      - name: run deploy.sh # 步骤3 （同时部署到github和coding）
+        env: # 设置环境变量
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
+        run: npm install && npm run deploy # 执行的命令
+        # package.json 中添加 "deploy": "bash deploy.sh"
