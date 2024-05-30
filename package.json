@@ -3,7 +3,6 @@
   "description": "GitHub Action to deploy to GitHub Pages",
   "main": "src/main.ts",
   "scripts": {
-    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && vuepress build docs",
     "deploy": "bash deploy.sh"
   },
   "repository": {
