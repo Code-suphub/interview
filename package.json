@@ -3,6 +3,7 @@
   "description": "GitHub Action to deploy to GitHub Pages",
   "main": "src/main.ts",
   "scripts": {
+    "build": "vuepress build docs",
     "deploy": "bash deploy.sh"
   },
   "repository": {
