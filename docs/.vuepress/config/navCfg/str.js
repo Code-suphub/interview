@@ -1,17 +1,14 @@
-// const pre = ['os',"network","mysql","redis","JavaLearning","PythonLearning","JavaInterview"]
 const xiaolinPre = ['os',"network","mysql","redis"]
-const guidePre = ["tools","advance"]
-const myPre = ["JavaLearning"]
-const pre = [...xiaolinPre,...guidePre,...myPre]
+const guidePre = ["java","cs-basics","database","tools","system-design","distributed-system","high-performance","high-availability"]
+const pre = [...xiaolinPre,...guidePre]
 // 确保lnk数组中的每个元素都以'/'结尾
 for(let i =0;i<pre.length;i++){
     pre[i]="/"+pre[i]+"/"
 }
-// const name = ['操作系统',"网络","数据库","redis","Java","Python学习","Java学习"]
-const xiaolinName = ['操作系统',"网络","数据库","redis","Java学习"]
-const guideName = ["开发工具","高级篇"]
-const myName = ["Java学习"]
-const name = [...xiaolinName,...guideName,...myName]
+
+const xiaolinName = ['操作系统',"网络","数据库","redis"]
+const guideName = ["Java","计算机基础","数据库","开发工具","系统设计","分布式","高性能","高可用"]
+const name = [...xiaolinName,...guideName]
 const xiaolinTxt = [
     ["硬件系统","操作系统结构","内存管理","进程管理","调度算法","文件系统","设备管理","网络系统","Linux命令","学习心得"],
     ["基础篇","HTTP篇","TCP篇","IP篇","学习心得"],
@@ -19,13 +16,16 @@ const xiaolinTxt = [
     ["面试","数据类型","持久化","功能篇","高可用","缓存"],
 ]
 const guideTxt = [
+    ["基础","集合","并发编程","IO","JVM","新特性"],
+    ["网络","操作系统","数据结构","算法"],
+    ["基础","MySQL","Redis","Elasticsearch","MongoDB"],
     ["Docker","git","gradle","maven"],
-    ["分布式","高性能","高可用"],
+    ["基础设计","常用框架","认证授权,数据安全","系统设计常见面试题","设计模式常见面试题","Java定时任务","Web实时消息推送"],
+    ["协议","RPC","ZooKeeper"],
+    ["CDN","负载均衡","数据库优化","消息队列"],
+    ["高可用指南","冗余设计","服务限流","降级&熔断","超时&重试","性能测试"],
 ]
-const myTxt = [
-    ["Java基础","Spring"],
-]
-const txtLst = [...xiaolinTxt,...guideTxt,...myTxt]
+const txtLst = [...xiaolinTxt,...guideTxt]
 let xiaolinLnk = [
     ["1_hardware","2_os_structure","3_memory","4_process","5_schedule","6_file_system","7_device","8_network_system","9_linux_cmd","10_learn"],
     ["1_base","2_http","3_tcp","4_ip","5_learn"],
@@ -33,13 +33,16 @@ let xiaolinLnk = [
     ["base","data_struct","storage","module","cluster","architecture"],
 ]
 const guideLnk = [
+    ["basis","collection","concurrent","io","jvm","new-features"],
+    ["network","operating-system","data-structure","algorithms"],
+    ["base","mysql","redis","elasticsearch","mongodb"],
     ["docker","git","gradle","maven"],
-    ["distributed-system","high-availability","high-performance"],
+    ["basis","framework","security"],
+    ["protocol","rpc","zookeeper"],
+    ["cdn","load-balance","sql-optim","message-queue"],
+    ["base","design","constrain","down","retry","test"],
 ]
-const myLnk = [
-    ["Java基础","Spring"]
-]
-const lnk = [...xiaolinLnk,...guideLnk,...myLnk]
+const lnk = [...xiaolinLnk,...guideLnk]
 for(let i =0;i<lnk.length;i++){
     for (let j = 0; j < lnk[i].length; j++){
         lnk[i][j]=lnk[i][j]+"/"
