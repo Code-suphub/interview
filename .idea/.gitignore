@@ -8,4 +8,4 @@
 /dataSources.local.xml
 .temp/
 node_modules/
-
+../run.sh

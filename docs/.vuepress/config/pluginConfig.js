@@ -17,9 +17,11 @@ module.exports={
             }
         }
     },
-    "vuepress-plugin-code-copy":
-    {
-    successText: "代码已复制",
+    "vuepress-plugin-nuggets-style-copy": {
+        copyText: "复制代码",
+            tip: {
+            content: "复制成功"
+        }
     },
     "img-lazy": true,
 }
