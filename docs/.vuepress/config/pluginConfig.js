@@ -1,6 +1,11 @@
 module.exports={
     '@vuepress/medium-zoom': {
-        selector: 'img.zoom-custom-imgs',
+      selector: 'img.lazy',
+      // medium-zoom options here
+      // See: https://github.com/francoischalifour/medium-zoom#options
+      options: {
+        margin: 16
+      }
     },
     '@vuepress/back-to-top': true,
     'vuepress-plugin-auto-sidebar': {},
@@ -17,9 +22,15 @@ module.exports={
             }
         }
     },
-    "vuepress-plugin-code-copy":
-    {
-    successText: "代码已复制",
+    // "vuepress-plugin-code-copy":
+    // {
+    // successText: "代码已复制",
+    // },
+    "vuepress-plugin-nuggets-style-copy": {
+    copyText: "复制代码",
+        tip: {
+        content: "复制成功"
+        }
     },
     "img-lazy": true,
 }

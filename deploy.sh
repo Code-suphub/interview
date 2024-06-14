@@ -24,4 +24,12 @@ git commit -m 'deploy'
 #git push -f git@github.com:Code-suphub/interview.git master:gh-pages
 git push -f git@github.com:Code-suphub/interview.git master:auto-deploy
 
+
+git remote add origin git@github.com:Code-suphub/interview.git
+git checkout -b auto-deploy
+git fetch origin
+git branch --set-upstream-to=refs/remotes/origin/auto-deploy
+git rebase origin/auto-deploy
+git push
+
 cd -
