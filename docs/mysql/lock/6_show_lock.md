@@ -192,7 +192,3 @@ mysql> insert into t_student(id, no, name, age,score) value (26, 'S0026', 'ace',
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/f4d4d7fdb9074b098b1077acff698aea.png)
 
 ---
-
-最新的图解文章都在公众号首发，别忘记关注哦！！如果你想加入百人技术交流群，扫码下方二维码回复「加群」。
-
-![img](https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost3@main/%E5%85%B6%E4%BB%96/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BB%8B%E7%BB%8D.png)

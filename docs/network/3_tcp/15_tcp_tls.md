@@ -125,7 +125,3 @@ TLSv1.3 还有个更厉害到地方在于**会话恢复**机制，在**重连 TL
 怎么样，那位“面试官”学废了吗？
 
 ---
-
-最新的图解文章都在公众号首发，别忘记关注哦！！如果你想加入百人技术交流群，扫码下方二维码回复「加群」。
-
-![img](https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost3@main/%E5%85%B6%E4%BB%96/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BB%8B%E7%BB%8D.png)
