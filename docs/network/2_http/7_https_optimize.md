@@ -9,9 +9,6 @@
 
 这次，就从多个角度来优化 HTTPS。
 
-
-![](https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost4@main/网络/https优化/优化https提纲.png)
-
 ---
 
 ## 分析性能损耗
@@ -40,14 +37,7 @@
 
 ## 硬件优化
 
-玩游戏时，如果我们怎么都战胜不了对方，那么有一个最有效、最快的方式来变强，那就是「充钱」，如果还是不行，那说明你充的钱还不够多。
-
-
-![](https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost4@main/网络/https优化/充钱.jpg)
-
-
-
-对于计算机里也是一样，软件都是跑在物理硬件上，硬件越牛逼，软件跑的也越快，所以如果要优化 HTTPS 优化，最直接的方式就是花钱买性能参数更牛逼的硬件。
+软件都是跑在物理硬件上，硬件越牛逼，软件跑的也越快，所以如果要优化 HTTPS 优化，最直接的方式就是花钱买性能参数更牛逼的硬件。
 
 但是花钱也要花对方向，**HTTPS 协议是计算密集型，而不是 I/O 密集型**，所以不能把钱花在网卡、硬盘等地方，应该花在 CPU 上。
 
@@ -126,7 +116,6 @@ ECDHE 算法是基于椭圆曲线实现的，不同的椭圆曲线性能也不�
 怎么合并的呢？具体的做法是，客户端在  Client Hello 消息里带上了支持的椭圆曲线，以及这些椭圆曲线对应的公钥。
 
 服务端收到后，选定一个椭圆曲线等参数，然后返回消息时，带上服务端这边的公钥。经过这 1 个 RTT，双方手上已经有生成会话密钥的材料了，于是客户端计算出会话密钥，就可以进行应用数据的加密传输了。
-
 
 而且，TLS1.3 对密码套件进行“减肥”了，
 **对于密钥交换算法，废除了不支持前向安全性的  RSA 和 DH 算法，只支持 ECDHE 算法**。
@@ -306,8 +295,4 @@ Session ID 和 Session Ticket **都不具备前向安全性**，因为一旦加�
 7. https://www.thesslstore.com/blog/crl-explained-what-is-a-certificate-revocation-list/
 
 ---
-
-哈喽，我是小林，就爱图解计算机基础，如果文章对你有帮助，别忘记关注哦！
-
-![](https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost2/%E5%85%B6%E4%BB%96/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BB%8B%E7%BB%8D.png)
 

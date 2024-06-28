@@ -221,10 +221,5 @@ CA 签发证书的过程，如上图左边部分：
 
 为了解决这个问题，后面就出现了 ECDHE 密钥协商算法，我们现在大多数网站使用的正是 ECDHE 密钥协商算法，关于 ECDHE 握手的过程，将在下一篇揭晓。
 
----
-
-哈喽，我是小林，就爱图解计算机基础，如果文章对你有帮助，别忘记关注哦！
-
-![](https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost2/%E5%85%B6%E4%BB%96/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BB%8B%E7%BB%8D.png)
 
 

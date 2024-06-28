@@ -323,7 +323,4 @@ traceroute 还有一个作用是**故意设置不分片，从而确定路径的 
 
 ----
 
-哈喽，我是小林，就爱图解计算机基础，如果觉得文章对你有帮助，别忘记关注我哦！
-
-![](https://cdn.jsdelivr.net/gh/xiaolincoder/ImageHost2/%E5%85%B6%E4%BB%96/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BB%8B%E7%BB%8D.png)
 

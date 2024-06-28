@@ -236,7 +236,3 @@ ping: sendto: No route to host
 - 如果服务器 `listen` 的是 `0.0.0.0`，那么此时用`127.0.0.1`和本机地址**都可以**访问到服务。
 
 ---
-
-哈喽，我是小林，就爱图解计算机基础，如果觉得文章对你有帮助，别忘记关注我哦！
-
-![img](https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost2/%E5%85%B6%E4%BB%96/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BB%8B%E7%BB%8D.png)

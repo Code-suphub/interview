@@ -22,17 +22,7 @@
 
 ![图片](https://img-blog.csdnimg.cn/img_convert/b8cca4b1291f25235bc8df3dddbb6da3.png)
 
-来都来了，你就选了个角色进到了游戏界面里。
 
-![图片](https://img-blog.csdnimg.cn/img_convert/95e5b4cee384b182d0e604378c3ca00a.jpeg)
-
-这时候，上来就是一个小怪，从远处走来，然后疯狂拿木棒子抽你。
-
-**你全程没点任何一次鼠标**。服务器就自动将怪物的移动数据和攻击数据源源不断发给你了。
-
-这…….太暖心了。
-
-感动之余，问题就来了：
 
 像这种**看起来服务器主动发消息给客户端的场景**，是怎么做到的？
 
@@ -61,8 +51,6 @@
 
 使用起来的体验就是，二维码出现后，手机扫一扫，然后在手机上点个确认，这时候**卡顿等个 1~2 秒**，页面才跳转。
 
-![图片](https://img-blog.csdnimg.cn/img_convert/5e0e0e25e8aca80812c9a2892032111c.png)
-
 那么问题又来了，**有没有更好的解决方案？**
 
 有，而且实现起来成本还非常低。
@@ -78,8 +66,6 @@
 ![图片](https://img-blog.csdnimg.cn/img_convert/1058a96ba35215c0f30accc3ff5bb824.png)
 
 比如，某度云网盘就是这么干的。所以你会发现一扫码，手机上点个确认，电脑端网页就**秒跳转**，体验很好。
-
-![图片](https://img-blog.csdnimg.cn/img_convert/a3a8c95b97d2bac26cfab123a4da68b2.png)
 
 像这种发起一个请求，在较长时间内等待服务器响应的机制，就是所谓的**长轮询机制**。我们常用的消息队列 RocketMQ 中，消费者去取数据时，也用到了这种方式。
 
@@ -249,8 +235,5 @@ WebSocket 完美继承了 TCP 协议的**全双工**能力，并且还贴心的�
 - WebSocket 和 socket 几乎没有任何关系，只是叫法相似。
 - 正因为各个浏览器都支持 HTTP 协议，所以 WebSocket 会先利用 HTTP 协议加上一些特殊的 Header 头进行握手升级操作，升级成功后就跟 HTTP 没有任何关系了，之后就用 WebSocket 的数据格式进行收发数据。
 
-------
+>  虽然HTTP/2也可以服务器主动推送数据，但是必须要客户端先发送请求才行
 
-***哈喽，我是小林，就爱图解计算机基础，如果觉得文章对你有帮助，欢迎微信搜索「小林 coding」关注我***
-
-![img](https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost3@main/%E5%85%B6%E4%BB%96/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BB%8B%E7%BB%8D.png)

@@ -224,9 +224,5 @@ RSA  和 ECDHE 握手过程的区别：
 4. https://time.geekbang.org/column/article/148188
 5. https://zhuanlan.zhihu.com/p/106967180
 
----
 
-哈喽，我是小林，就爱图解计算机基础，如果文章对你有帮助，别忘记关注哦！
-
-![](https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost2/%E5%85%B6%E4%BB%96/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BB%8B%E7%BB%8D.png)
 
